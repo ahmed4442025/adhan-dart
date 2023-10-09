@@ -29,7 +29,10 @@ class PrayerTimes {
   late DateTime _isha;
   DateTime get isha => _isha;
 
-  // If you give a UTC Offset then Prayer Times will convert local(with device timezone) time
+
+  set fajr(DateTime value) {
+    _fajr = value;
+  } // If you give a UTC Offset then Prayer Times will convert local(with device timezone) time
   // to UTC and then add the offset.
   final Duration? utcOffset;
 
@@ -403,5 +406,33 @@ class PrayerTimes {
       }
     }
     return daysSinceSolistice;
+  }
+
+  set setSunrise( value) {
+    _sunrise = value;
+  }
+
+  set setDhuhr( value) {
+    _dhuhr = value;
+  }
+
+  set setAsr( value) {
+    _asr = value;
+  }
+
+  set setMaghrib( value) {
+    _maghrib = value;
+  }
+
+ set setFajr( value) {
+   _fajr = value;
+  }
+
+  set setIsha( value) {
+    _isha = value;
+  }
+
+  set dateComponents(DateComponents value) {
+    _dateComponents = value;
   }
 }
